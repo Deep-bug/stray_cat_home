@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:stray_cat_home/page/user_page/user.dart';
+import 'package:stray_cat_home/pages/community_page/widget/community_appBar.dart';
+import 'package:stray_cat_home/pages/user_page/user.dart';
 import 'package:stray_cat_home/widget/customAnimatedBottomBar.dart';
 import 'package:stray_cat_home/util/theme.dart';
 
-import 'page/cat_map_page/CatHomeMap.dart';
-import 'page/catInfo.dart';
-import 'page/community.dart';
+import 'pages/cat_map_page/CatHomeMap.dart';
+import 'pages/cat_family_page/catInfo.dart';
+import 'pages/community_page/community.dart';
 class HomeIndexPage extends StatefulWidget {
   const HomeIndexPage({Key? key}) : super(key: key);
 
@@ -19,26 +20,31 @@ class _HomeIndexPageState extends State<HomeIndexPage> {
   Color backgroundColor =primary;
   List<String> titles = ['地图', '社区', '图鉴', '我的'];
   List<Widget> bodywidget = [
-    CatHomeMap(),
-    community(),
-    catInfo(),
-    userInfo(),
+    const CatHomeMap(),
+    const community(),
+    const catInfo(),
+    const userInfo(),
   ];
+  List<Widget> AppBarWidget=[
+    const CommunityAppBar()
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          brightness: Brightness.dark,
-          automaticallyImplyLeading: false,
-          title: Text(titles[_currentIndex],
-            style: const TextStyle(
-              color: Colors.black,
-              fontSize: 28,
-            ),
-          ),
-        ),
+
+        // appBar: AppBar(
+        //   backgroundColor: Colors.white,
+        //   brightness: Brightness.dark,
+        //   automaticallyImplyLeading: false,
+        //   title: Text(titles[_currentIndex],
+        //     style: const TextStyle(
+        //       color: Colors.black,
+        //       fontSize: 28,
+        //     ),
+        //   ),
+        // ),
         body: bodywidget[_currentIndex],
         bottomNavigationBar: _buildBottomBar());
   }

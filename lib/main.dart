@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:stray_cat_home/home.dart';
 import 'package:stray_cat_home/homeIndexPage.dart';
-import 'package:stray_cat_home/page/login_page/login.dart';
-import 'package:stray_cat_home/page/user_page/usertest.dart';
+import 'package:stray_cat_home/pages/login_page/login.dart';
+import 'package:stray_cat_home/pages/user_page/usertest.dart';
 import 'package:stray_cat_home/util/theme.dart';
 
 void main() {

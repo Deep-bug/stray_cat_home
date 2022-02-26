@@ -1,5 +1,5 @@
 import 'package:stray_cat_home/generated/json/base/json_convert_content.dart';
-import 'package:stray_cat_home/page/login_page/models/access_token_entity.dart';
+import 'package:stray_cat_home/pages/login_page/models/access_token_entity.dart';
 
 AccessTokenEntity $AccessTokenEntityFromJson(Map<String, dynamic> json) {
 	final AccessTokenEntity accessTokenEntity = AccessTokenEntity();

@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:stray_cat_home/model/cardModel.dart';
-import 'package:stray_cat_home/page/user_page/widget/AppBarTabsItem.dart';
+import 'package:stray_cat_home/widget/cardModel.dart';
+import 'package:stray_cat_home/pages/user_page/widget/AppBarTabsItem.dart';
 import 'package:stray_cat_home/widget/cardWidget.dart';
 import 'package:waterfall_flow/waterfall_flow.dart';
 

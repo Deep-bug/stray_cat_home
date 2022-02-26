@@ -46,7 +46,7 @@ class _loginFormState extends State<loginForm> {
              TextFormField(
                controller: _uNameController,
               obscureText: true,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: '用户名/手机号',
               ),
@@ -59,7 +59,7 @@ class _loginFormState extends State<loginForm> {
            // controller:{TextEditingController _userName = TextEditingController(),
             controller: _pwdController,
             obscureText: true,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               border: OutlineInputBorder(),
               labelText: '密码',
             ),
