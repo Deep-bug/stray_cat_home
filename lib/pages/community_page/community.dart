@@ -109,11 +109,7 @@ class _communityState extends State<community> {
   @override
   Widget build(BuildContext context) {
     //手势检测器
-    return GestureDetector(
-      behavior: HitTestBehavior.translucent,
-      onTapDown: (TapDownDetails details) {
-        FocusScope.of(context).requestFocus(FocusNode());
-      },
+    return SafeArea(
       child: Scaffold(
         appBar: AppBar(
           //remove bacIcon
@@ -213,7 +209,7 @@ class _communityState extends State<community> {
                         image: FadeInImage.assetNetwork(
                           image: cm.cardImg,
                           fit: BoxFit.cover,
-                          placeholder: 'assets/images/my_head.jpg' /* 占位图 */,
+                          placeholder: 'asserts/images/myhead.png' /* 占位图 */,
                         ),
                         avatar: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
@@ -221,7 +217,7 @@ class _communityState extends State<community> {
                             image: cm.cardAvatar,
                             width: 20,
                             fit: BoxFit.cover,
-                            placeholder: 'assets/images/my_head.jpg' /* 占位图 */,
+                            placeholder: 'asserts/images/myhead.png' /* 占位图 */,
                           ),
                         ),
                         desc: Container(
