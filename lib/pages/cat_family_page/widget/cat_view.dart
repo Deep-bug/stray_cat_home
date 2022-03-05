@@ -10,12 +10,12 @@ class CattGridView extends StatelessWidget {
   final Size size;
   //通过接口获得list
   final List<Cat> catItemList=[
-    Cat('asserts/images/loadingPicture.jpeg','demo','健康',Colors.white),
-    Cat('asserts/images/loadingPicture.jpeg','demo2','健康',Color(0xFF311B92)),
-    Cat('asserts/images/loadingPicture.jpeg','demo3','健康',Color(0xFF311B92)),
-    Cat('asserts/images/loadingPicture.jpeg','demo4','健康',Color(0xFF311B92)),
-    Cat('asserts/images/loadingPicture.jpeg','demo5','健康',Color(0xFF311B92)),
-    Cat('asserts/images/loadingPicture.jpeg','demo6','健康',Color(0xFF311B92)),
+    Cat('11111','asserts/images/loadingPicture.jpeg','demo','健康',Colors.white),
+    Cat('111111','asserts/images/loadingPicture.jpeg','demo2','健康',Color(0xFF311B92)),
+    Cat('111111','asserts/images/loadingPicture.jpeg','demo3','健康',Color(0xFF311B92)),
+    Cat('111111','asserts/images/loadingPicture.jpeg','demo4','健康',Color(0xFF311B92)),
+    Cat('111111','asserts/images/loadingPicture.jpeg','demo5','健康',Color(0xFF311B92)),
+    Cat('111111','asserts/images/loadingPicture.jpeg','demo6','健康',Color(0xFF311B92)),
 
   ];
   @override
