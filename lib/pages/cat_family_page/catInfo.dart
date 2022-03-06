@@ -19,16 +19,16 @@ class _catInfoState extends State<catInfo> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: AppBar(
-          title: Text("猛兽图鉴"),
+          title: const Text("猛兽图鉴"),
         ),
         body: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              PageListTitle(),
-              SizedBox(
+              const PageListTitle(),
+              const SizedBox(
                 height: 12,
               ),
-              CattGridView(size: size),
+              CatGridView(size: size),
             ])
         // Column(
         //   crossAxisAlignment: CrossAxisAlignment.start,
