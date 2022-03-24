@@ -7,14 +7,14 @@ import 'package:stray_cat_home/pages/user_page/widget/AppBarTabsItem.dart';
 import 'package:stray_cat_home/widget/cardWidget.dart';
 import 'package:waterfall_flow/waterfall_flow.dart';
 
-class usertest extends StatefulWidget {
-  const usertest({Key? key}) : super(key: key);
+class userIndex extends StatefulWidget {
+  const userIndex({Key? key}) : super(key: key);
 
   @override
-  _usertestState createState() => _usertestState();
+  _userIndexState createState() => _userIndexState();
 }
 
-class _usertestState extends State<usertest> with TickerProviderStateMixin {
+class _userIndexState extends State<userIndex> with TickerProviderStateMixin {
   late Widget _bgImage;
   int _currenTab = 0;
   late TabController _tabController;

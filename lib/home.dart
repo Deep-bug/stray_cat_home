@@ -1,8 +1,12 @@
+
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:stray_cat_home/pages/cat_family_page/controller/getCatFamilyListController.dart';
+import 'package:stray_cat_home/routers/application.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -20,14 +24,14 @@ class Home extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/login_page');
+                    SCHApplication.router?.navigateTo(context, '/loginIndex',transition: TransitionType.fadeIn);
                     //  Navigator.pushNamed(context, '/login');
                   },
                   child: const Text("登录页"),
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/my');
+                    SCHApplication.router?.navigateTo(context, '/my',transition: TransitionType.fadeIn);
                     //  Navigator.pushNamed(context, '/login');
                   },
                   child: const Text("my"),
@@ -35,7 +39,7 @@ class Home extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     getCatFamilyList();
-                    //  Navigator.pushNamed(context, '/login');
+                     Navigator.pushNamed(context, '/test');
                   },
                   child: const Text("获取猫咪列表"),
                 )

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:stray_cat_home/pages/community_page/widget/community_appBar.dart';
 import 'package:stray_cat_home/pages/user_page/user.dart';
-import 'package:stray_cat_home/pages/user_page/usertest.dart';
+import 'package:stray_cat_home/pages/user_page/user_index_page.dart';
+import 'package:stray_cat_home/util/navigate_util.dart';
 import 'package:stray_cat_home/widget/customAnimatedBottomBar.dart';
 import 'package:stray_cat_home/util/theme.dart';
 
@@ -15,6 +16,7 @@ class HomeIndexPage extends StatefulWidget {
   _HomeIndexPageState createState() => _HomeIndexPageState();
 }
 
+
 class _HomeIndexPageState extends State<HomeIndexPage> {
   int _currentIndex = 0;
   final _inactiveColor = Colors.black;
@@ -24,7 +26,7 @@ class _HomeIndexPageState extends State<HomeIndexPage> {
     const CatHomeMap(),
     const community(),
     const catInfo(),
-    const usertest(),
+    const userIndex(),
   ];
   List<Widget> AppBarWidget=[
     const CommunityAppBar()
