@@ -5,9 +5,5 @@ class APIS{
   static const test = "/test";
   //获取校园猫咪列表
   static const getCatBasicList ="/v2/catInform/CatBasicInfoList";
-
-
-
-
 }
 
