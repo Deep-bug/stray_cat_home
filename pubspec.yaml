@@ -35,8 +35,12 @@ dependencies:
   #可以显示进度条，逐渐透明显示出来加载的图片
   transparent_image: ^2.0.0
   flutter_svg: ^1.0.3
-  #状态管理插件
-  provider: ^6.0.2
+#  #状态管理插件
+#  provider: ^6.0.2
+  #GetX状态管理框架 https://pub.flutter-io.cn/packages/get
+  get: 4.3.7
+  # SP键值对存储 https://pub.flutter-io.cn/packages/shared_preferences
+  shared_preferences: ^2.0.6
   # 路由管理
   fluro: ^2.0.3
   # 屏幕适配
