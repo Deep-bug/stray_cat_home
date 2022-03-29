@@ -6,8 +6,7 @@ class Counter with ChangeNotifier{
       _count++;
       notifyListeners();
     }
-    @override
-  // TODO: implement hashCode
+    // TODO: implement hashCode
   int get count => _count;
 
 }
