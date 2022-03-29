@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_instance/src/extension_instance.dart';
 import 'package:stray_cat_home/pages/community_page/widget/community_appBar.dart';
-import 'package:stray_cat_home/pages/user_page/user.dart';
-import 'package:stray_cat_home/pages/user_page/user_index_page.dart';
-import 'package:stray_cat_home/util/navigate_util.dart';
+import 'package:stray_cat_home/pages/my_page/my_controller.dart';
+import 'package:stray_cat_home/pages/my_page/my_page.dart';
 import 'package:stray_cat_home/widget/customAnimatedBottomBar.dart';
 import 'package:stray_cat_home/util/theme.dart';
 
@@ -17,37 +19,46 @@ class HomeIndexPage extends StatefulWidget {
 }
 
 
-class _HomeIndexPageState extends State<HomeIndexPage> {
+class _HomeIndexPageState extends State<HomeIndexPage> with SingleTickerProviderStateMixin, WidgetsBindingObserver{
+   ///初始化定义
   int _currentIndex = 0;
   final _inactiveColor = Colors.black;
   Color backgroundColor =primary;
+
   List<String> titles = ['地图', '社区', '图鉴', '我的'];
   List<Widget> bodywidget = [
     const CatHomeMap(),
     const community(),
     const catInfo(),
-    const userIndex(),
+    //const CatInfoV2Page(),
+    //const CatGridView(),
+    const MyPage(),
   ];
   List<Widget> AppBarWidget=[
     const CommunityAppBar()
   ];
 
+
+  @override
+  void initState() {
+    WidgetsBinding.instance?.addObserver(this);
+    Get.find<MyController>();
+    //Get.find<CatInfoV2Controller>();
+    //.notifyCatInfoList();
+
+  }
+
+
+  @override
+  void dispose() {
+    super.dispose();
+    WidgetsBinding.instance?.removeObserver(this);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-
-        // appBar: AppBar(
-        //   backgroundColor: Colors.white,
-        //   brightness: Brightness.dark,
-        //   automaticallyImplyLeading: false,
-        //   title: Text(titles[_currentIndex],
-        //     style: const TextStyle(
-        //       color: Colors.black,
-        //       fontSize: 28,
-        //     ),
-        //   ),
-        // ),
         body: bodywidget[_currentIndex],
         bottomNavigationBar: _buildBottomBar());
   }

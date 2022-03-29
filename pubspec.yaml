@@ -43,8 +43,20 @@ dependencies:
   shared_preferences: ^2.0.6
   # 路由管理
   fluro: ^2.0.3
-  # 屏幕适配
-  flutter_screenutil: ^5.3.1
+#  # 屏幕适配
+#  flutter_screenutil: ^5.3.1
+  #toast https://pub.flutter-io.cn/packages/fluttertoast
+  fluttertoast: ^8.0.8
+  #文件路径管理工具类
+  path_provider: ^2.0.2
+  # 网络检测 https://pub.flutter-io.cn/packages/connectivity
+  connectivity: 3.0.6
+  #上拉刷新、下拉加载
+  pull_to_refresh: ^2.0.0
+  # lottie动画 https://pub.flutter-io.cn/packages/flutter_lottie
+  lottie: ^1.2.2
+  # https://github.com/flutter/plugins/tree/master/packages/url_launcher
+  url_launcher: ^6.0.9
 
 dev_dependencies:
   flutter_test:
@@ -54,4 +66,13 @@ flutter:
   uses-material-design: true
   assets:
     - asserts/images/
+    - asserts/images/3.0x/
+    - asserts/svg/
+    - asserts/lottie/lottie_common_load.json
+    - asserts/lottie/page_loading_anim.json
+    - asserts/lottie/refresh_footer.json
+    - asserts/lottie/refresh_head_loading.json
+    - asserts/lottie/refresh_empty_page.json
+    - asserts/lottie/refresh_error.json
+    - asserts/lottie/collect_success.json
 
