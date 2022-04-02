@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 import 'package:stray_cat_home/pages/cat_family_page/catInfo.dart';
+import 'package:stray_cat_home/pages/cat_family_page/cat_detail_info/cat_detail_info_binding.dart';
+import 'package:stray_cat_home/pages/cat_family_page/cat_detail_info/cat_detail_page.dart';
 import 'package:stray_cat_home/pages/home_page_v2/home_page_v2_binding.dart';
 import 'package:stray_cat_home/pages/home_page_v2/home_page_v2_controller.dart';
 import 'package:stray_cat_home/pages/login_page/login_binding.dart';
@@ -48,7 +50,8 @@ abstract class Routes {
   ///语言
   static const String settingLanguagePage = '/language';
 
-
+  ///猫咪详情页
+  static const String getCatInfoDetail='/catInfoDetail';
   ///页面合集
   static final routePage = [
     GetPage(
@@ -87,6 +90,11 @@ abstract class Routes {
     GetPage(
       name: settingLanguagePage,
       page: () => const SettingLanguagePage(),
+    ),
+    GetPage(
+      name: getCatInfoDetail,
+      page: () =>  const CatInfoDetail(),
+      binding: CatInfoDetailBinding()
     ),
   ];
 }

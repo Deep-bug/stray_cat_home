@@ -57,6 +57,9 @@ dependencies:
   lottie: ^1.2.2
   # https://github.com/flutter/plugins/tree/master/packages/url_launcher
   url_launcher: ^6.0.9
+  # 轮播图
+  flutter_swiper_null_safety: ^1.0.2
+
 
 dev_dependencies:
   flutter_test:
