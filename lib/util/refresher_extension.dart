@@ -3,11 +3,21 @@ import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:stray_cat_home/res/strings.dart';
 import 'package:stray_cat_home/util/totast_util.dart';
+import 'package:stray_cat_home/widget/detail_refresh_widget.dart';
 import 'package:stray_cat_home/widget/pull_smart_refresher.dart';
 
 
 
 class RefreshExtension{
+
+
+  ///详情页刷新
+  static NoPageSuccess(RefreshController controller, DetailRefreshState detailRefreshState){
+    controller.loadComplete();
+  }
+  static NoPageError(RefreshController controller,DetailRefreshState detailRefreshState){
+    controller.loadFailed();
+  }
 
 
   ///刷新加载失败

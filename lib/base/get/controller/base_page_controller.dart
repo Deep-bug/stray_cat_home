@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:stray_cat_home/widget/pull_smart_refresher.dart';
@@ -43,6 +44,7 @@ class BaseGetPageController extends BaseGetController{
   ///预留初次加载，注意只供上拉下拉使用
   initPullLoading(RefreshController controller){
     if(isInit){
+      debugPrint("加载中1");
       this.controller = controller;
       requestData(controller);
     }
@@ -51,12 +53,14 @@ class BaseGetPageController extends BaseGetController{
   ///预留上拉刷新
   onLoadRefresh(RefreshController controller){
     page = 1;
+    debugPrint("加载中2");
     requestData(controller , refresh :Refresh.pull);
   }
 
   ///预留下拉加载
   onLoadMore(RefreshController controller){
     ++ page;
+    debugPrint("加载中3");
     requestData(controller ,refresh :Refresh.down);
   }
 

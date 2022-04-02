@@ -1,24 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:stray_cat_home/base/get/get_save_state_view.dart';
-import 'package:stray_cat_home/pages/my_page/widget/head_circle_widget.dart';
 import 'package:stray_cat_home/pages/my_page/widget/title_content_widget.dart';
 import 'package:stray_cat_home/res/colors.dart';
-import 'package:stray_cat_home/res/constant.dart';
-import 'package:stray_cat_home/res/r.dart';
+
 import 'package:stray_cat_home/res/shadow_style.dart';
 import 'package:stray_cat_home/res/strings.dart';
 import 'package:stray_cat_home/res/style.dart';
 import 'package:stray_cat_home/routers/routes.dart';
-import 'package:stray_cat_home/ui/dialog/dialog_share_appliction.dart';
 import 'package:stray_cat_home/widget/icon_text_widget.dart';
 
 import 'my_controller.dart';
 
-/// @class : MyPage
-/// @date : 2021/08/20
-/// @name : jhf
 /// @description :我的 View层
 class MyPage extends GetSaveView<MyController> {
   const MyPage({Key? key}) : super(key: key);

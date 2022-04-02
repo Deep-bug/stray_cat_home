@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:stray_cat_home/http/request_api.dart';
 import 'package:stray_cat_home/model/request_register.dart';
+import 'package:stray_cat_home/pages/cat_family_page/cat_detail_info/cat_detail_page.dart';
+import 'package:stray_cat_home/pages/cat_family_page/models/cat_info_detail.dart';
 import 'package:stray_cat_home/pages/cat_family_page/models/cat_list_model.dart';
 import 'package:stray_cat_home/util/sp_util.dart';
 import 'package:stray_cat_home/http/request.dart';
@@ -117,7 +119,7 @@ class RequestRepository {
           }
         });
   }
-  //
+
   ///条件筛选猫咪列表
   /// [catname]猫咪名字
   /// 【catstate】猫咪状态
@@ -171,32 +173,32 @@ class RequestRepository {
       }
     });
   }
-  //
-  //  ///请求项目列表接口
-  // ///[id]文章ID
-  // /// [success] 请求成功回调
-  // /// [fail] 请求失败回调
-  // requestTabModule(
-  //   int page, {
-  //   SuccessOver<List<ProjectDetail>>? success,
-  //   Fail? fail,
-  // }) {
-  //   Request.get<dynamic>(
-  //       RequestApi.apiProject.replaceFirst(RegExp('page'), '$page'), {},
-  //       dialog: false, success: (data) {
-  //     ProjectPage pageData = ProjectPage.fromJson(data);
-  //     var list = pageData.datas.map((value) {
-  //       return ProjectDetail.fromJson(value);
-  //     }).toList();
-  //     if (success != null) {
-  //       success(list, pageData.over);
-  //     }
-  //   }, fail: (code, msg) {
-  //     if (fail != null) {
-  //       fail(code, msg);
-  //     }
-  //   });
-  // }
+
+  ///请求猫咪详细信息
+  /// [catnumber]账号
+  /// [success] 请求成功回调
+  /// [fail] 请求失败回调
+  getCatDetailInfo(
+      String catnumber,{
+        Success<CatInfoDetailModel>? success,
+        Fail? fail,
+       }) {
+    Request.post<dynamic>(
+        RequestApi.apiGetCatDetailInfo, {
+      "id": catnumber
+    },dialog: false, success: (data) {
+      debugPrint("返回猫咪详细信息=>$data");
+      CatInfoDetailModel catInfoDetailModel = CatInfoDetailModel.fromJson(data);
+      if (success != null) {
+        success(catInfoDetailModel);
+      }
+    }, fail: (code, msg) {
+      if (fail != null) {
+        fail(code, msg);
+      }
+    });
+  }
+
   //
   // ///请求积分排行榜接口
   // ///[id]文章ID

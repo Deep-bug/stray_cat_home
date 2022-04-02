@@ -13,11 +13,12 @@ class RequestApi{
   static const String apiLogin = 'member/quickLogin';
   ///注册接口
   static const String apiRegister= 'member/register';
-  ///猫咪信息接口
+  ///猫咪条件查询信息接口
   static const String apiSelectCatInfo  ='catInform/CatBasicInfoList';
   ///猫咪信息接口
   static const String apiAllCatInfo='catInform/onCatBasicInfoList';
-
+  ///猫咪详细信息接口
+  static const String apiGetCatDetailInfo='catInform/CatDetailInfoById';
   ///用户信息接口
   static const String apiUserInfo = 'member/getuserinfo';
   ///首页Tab栏接口
