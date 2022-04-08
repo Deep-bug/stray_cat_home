@@ -34,6 +34,7 @@ class R {
   static const String assetsImagesCollectQuit = 'assets/svg/collect_quit.svg';
   static const String assetsImagesProgram = 'asserts/svg/program.svg';
   static const String assetsImagesDateTime= 'asserts/svg/date_time.svg';
+  static const String assetsImagesPageBack='asserts/svg/back.svg';
 
   ///----------------------------lottie---------------------------
   static const String assetsLottieLoading = 'asserts/lottie/lottie_common_load.json';

@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 import 'package:stray_cat_home/pages/cat_family_page/catInfo.dart';
 import 'package:stray_cat_home/pages/cat_family_page/cat_detail_info/cat_detail_info_binding.dart';
 import 'package:stray_cat_home/pages/cat_family_page/cat_detail_info/cat_detail_page.dart';
+import 'package:stray_cat_home/pages/community_page/community_card/community_card.dart';
+import 'package:stray_cat_home/pages/community_page/community_card/community_card_binding.dart';
 import 'package:stray_cat_home/pages/home_page_v2/home_page_v2_binding.dart';
 import 'package:stray_cat_home/pages/home_page_v2/home_page_v2_controller.dart';
 import 'package:stray_cat_home/pages/login_page/login_binding.dart';
@@ -16,7 +18,7 @@ import 'package:stray_cat_home/pages/splash_page/splash_page.dart';
 import 'package:stray_cat_home/pages/user_model/user_info_page/userinfo_binding.dart';
 import 'package:stray_cat_home/pages/user_model/user_info_page/userinfo_page.dart';
 
-import '../homeIndexPage.dart';
+// import '../homeIndexPage.dart';
 import '../home_binding.dart';
 
 /// @class : Routes
@@ -52,6 +54,9 @@ abstract class Routes {
 
   ///猫咪详情页
   static const String getCatInfoDetail='/catInfoDetail';
+
+  ///社区详情页
+  static const String getCommunityCardDetail='/communityCardDetail';
   ///页面合集
   static final routePage = [
     GetPage(
@@ -62,10 +67,10 @@ abstract class Routes {
         name: registerPage,
         page: () => const RegisterPage(),
         binding: RegisterBinding()),
-    GetPage(
-        name: homePage,
-        page: () => const HomeIndexPage(),
-        binding: HomeBinding()),
+    // GetPage(
+    //     name: homePage,
+    //     page: () => const HomeIndexPage(),
+    //     binding: HomeBinding()),
     GetPage(
         name: homePageV2,
         page: () => const HomePageV2(),
@@ -95,6 +100,10 @@ abstract class Routes {
       name: getCatInfoDetail,
       page: () =>  const CatInfoDetail(),
       binding: CatInfoDetailBinding()
+    ),
+    GetPage(name: getCommunityCardDetail,
+        page:() => const CommunityMesageDetailCard() ,
+      //  binding: CommunityCardBinding()
     ),
   ];
 }

@@ -21,6 +21,12 @@ class RequestApi{
   static const String apiGetCatDetailInfo='catInform/CatDetailInfoById';
   ///用户信息接口
   static const String apiUserInfo = 'member/getuserinfo';
+  ///社区分页接口
+  static const String apiGetPageCommunityMessage ='community/PageCommunityMessage';
+  ///
+  ///
+  ///
+  ///
   ///首页Tab栏接口
   static const String apiTab = 'project/tree/json';
   ///项目接口

@@ -28,30 +28,7 @@ class CatInfoController extends BaseGetPageController{
         RefreshExtension.onError(controller, refresh);
     });
   }
-   // @override
-   // void onInit(){
-   //    super.onInit();
-   //    String catname='';
-   //    String catstate='';
-   //    requestCatList(catname,catstate);
-   // }
-  void notifyCatInfoList(){
-    String catname='';
-    String catstate='';
-    request.AllCatList( success:(data){
-      debugPrint("获取猫咪信息>>>$data");
-      catInfoList.addAll(data);
-    },fail: (code,msg){
-    });
-    update();
-  }
-   requestCatList(catname,catstate){
-     request.collectCatList(catname, catstate, success:(data){
-        debugPrint("获取猫咪信息>>>$data");
-        catInfoList.addAll(data);
-     },fail: (code,msg){
-     });
-   }
+
 
 
 }
