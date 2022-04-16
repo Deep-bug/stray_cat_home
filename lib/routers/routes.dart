@@ -4,6 +4,8 @@ import 'package:stray_cat_home/pages/cat_family_page/cat_detail_info/cat_detail_
 import 'package:stray_cat_home/pages/cat_family_page/cat_detail_info/cat_detail_page.dart';
 import 'package:stray_cat_home/pages/community_page/community_card/community_card.dart';
 import 'package:stray_cat_home/pages/community_page/community_card/community_card_binding.dart';
+import 'package:stray_cat_home/pages/community_page/push_page/push_binding.dart';
+import 'package:stray_cat_home/pages/community_page/push_page/push_page.dart';
 import 'package:stray_cat_home/pages/home_page_v2/home_page_v2_binding.dart';
 import 'package:stray_cat_home/pages/home_page_v2/home_page_v2_controller.dart';
 import 'package:stray_cat_home/pages/login_page/login_binding.dart';
@@ -57,6 +59,9 @@ abstract class Routes {
 
   ///社区详情页
   static const String getCommunityCardDetail='/communityCardDetail';
+
+  ///发布动态页
+  static const String pushInfoPage='/pushInfoPage';
   ///页面合集
   static final routePage = [
     GetPage(
@@ -104,6 +109,11 @@ abstract class Routes {
     GetPage(name: getCommunityCardDetail,
         page:() => const CommunityMesageDetailCard() ,
       //  binding: CommunityCardBinding()
+    ),
+    GetPage(
+        name: pushInfoPage,
+        page: () =>  const PushPage(),
+        binding: PushBinding()
     ),
   ];
 }

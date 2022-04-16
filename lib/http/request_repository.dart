@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:stray_cat_home/http/request_api.dart';
 import 'package:stray_cat_home/model/project_model.dart';
 import 'package:stray_cat_home/model/request_register.dart';
-import 'package:stray_cat_home/pages/cat_family_page/cat_detail_info/cat_detail_page.dart';
 import 'package:stray_cat_home/pages/cat_family_page/models/cat_info_detail.dart';
 import 'package:stray_cat_home/pages/cat_family_page/models/cat_list_model.dart';
 import 'package:stray_cat_home/pages/community_page/models/communityItem.dart';
@@ -17,7 +16,6 @@ typedef SuccessOver<T> = Function(T data, bool over);
 
 /// @class : RequestRepository
 /// @date : 2021/08/25
-/// @name : jhf
 /// @description : 请求仓库
 class RequestRepository {
   ///登录请求

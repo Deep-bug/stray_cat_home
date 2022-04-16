@@ -1,12 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:stray_cat_home/pages/community_page/sos_page/sos_page.dart';
 import 'package:stray_cat_home/res/colors.dart';
 import 'package:stray_cat_home/res/r.dart';
 import 'package:stray_cat_home/res/strings.dart';
 import 'package:stray_cat_home/res/style.dart';
+import 'package:stray_cat_home/routers/routes.dart';
 
 import 'adopt_page/adopt_page.dart';
 import 'normal_page/community.dart';
@@ -37,6 +40,11 @@ class _CommunityComplexPageState extends State<CommunityComplexPage> with Single
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
+        floatingActionButton: FloatingActionButton.extended(
+          onPressed: (){ Get.toNamed(Routes.pushInfoPage);},
+          icon:Icon(Icons.add),
+          label: Text('发布动态'),
+        ),
         body: SafeArea(
           top: true,
           child: Column(
@@ -94,6 +102,8 @@ class _CommunityComplexPageState extends State<CommunityComplexPage> with Single
                   )),
             ],
           ),
-        ));
+        )
+
+    );
   }
 }

@@ -61,7 +61,8 @@ dependencies:
   flutter_swiper_null_safety: ^1.0.2
   #加载webview
   webview_flutter: ^2.0.12
-
+  #读取相册
+  image_picker: 0.8.3+3
 
 dev_dependencies:
   flutter_test:
