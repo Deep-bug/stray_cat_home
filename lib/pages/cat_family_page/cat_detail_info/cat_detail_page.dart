@@ -16,7 +16,7 @@ class CatInfoDetail extends GetSaveView<CatInfoDetailController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-
+        top: false,
         child: DetailRefreshWidget<CatInfoDetailController>(
         child: Container(
           color: Colors.amberAccent,
