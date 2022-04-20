@@ -1,9 +1,13 @@
+
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:stray_cat_home/http/request_api.dart';
 import 'package:stray_cat_home/model/project_model.dart';
 import 'package:stray_cat_home/model/request_register.dart';
 import 'package:stray_cat_home/pages/cat_family_page/models/cat_info_detail.dart';
 import 'package:stray_cat_home/pages/cat_family_page/models/cat_list_model.dart';
+import 'package:stray_cat_home/pages/community_page/models/CmuDetail.dart';
 import 'package:stray_cat_home/pages/community_page/models/communityItem.dart';
 import 'package:stray_cat_home/util/sp_util.dart';
 import 'package:stray_cat_home/http/request.dart';
@@ -198,7 +202,30 @@ class RequestRepository {
       }
     });
   }
-
+  ///社区
+  /// [id]编号
+  /// [success] 请求成功回调
+  /// [fail] 请求失败回调
+  getCommunityDetailInfo(
+      String id,{
+        Success<CmuDetail>? success,
+        Fail? fail,
+      }) {
+    Request.post<dynamic>(
+        RequestApi.apiGetCommunityDetail, {
+        "id": id
+    },dialog: false, success: (data) {
+      debugPrint("返回社区动态详细信息=>$data");
+      CmuDetail cmuDetail = CmuDetail.fromJson(data);
+      if (success != null) {
+        success(cmuDetail);
+      }
+    }, fail: (code, msg) {
+      if (fail != null) {
+        fail(code, msg);
+      }
+    });
+  }
 
   ///请求社区分页动态
   ///[page]
@@ -225,5 +252,34 @@ class RequestRepository {
     });
    }
 
-   ///
+   ///发布动态
+   PushMessage(
+       String title,
+       String content,
+       String comupids,
+       int CmuClassify,
+       String uid,
+       List<File> files,{
+         Success<UserEntity>? success,
+         Fail? fail,
+       }){
+    Request.post<dynamic>(
+        RequestApi.apiPushMessage,
+        {
+          'title':title,
+          'content':content,
+          'comupids':comupids,
+          'CmuClassify':CmuClassify,
+          'uid':uid,
+          'files': files
+        },success:(data){
+      if (success != null) {
+        success(data);
+      }
+    }, fail: (code, msg) {
+     if (fail != null) {
+      fail(code, msg);
+     }
+     });
+   }
 }

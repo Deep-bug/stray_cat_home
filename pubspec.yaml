@@ -11,7 +11,7 @@ dependencies:
   waterfall_flow: any
   flutter_staggered_grid_view: ^0.6.1
   #网络请求组件
-  dio: ^4.0.4
+  dio: ^4.0.6
   #字符加密
   crypto: ^3.0.1
   #简单的加载loading
@@ -62,7 +62,7 @@ dependencies:
   #加载webview
   webview_flutter: ^2.0.12
   #读取相册
-  image_picker: 0.8.3+3
+  image_picker: ^0.8.5
 
 dev_dependencies:
   flutter_test:

@@ -5,8 +5,8 @@
 class RequestApi{
 
   ///前缀地址
-  static const String baseurl = 'http://101.132.45.190:8888/cathome/app/v2/';
-  //static const String baseurl = 'http://127.0.0.1:8888/cathome/app/v2/';
+  //static const String baseurl = 'http://101.132.45.190:8888/cathome/app/v2/';
+  static const String baseurl = 'http://127.0.0.1:8888/cathome/app/v2/';
 
 
   ///登录接口
@@ -23,7 +23,11 @@ class RequestApi{
   static const String apiUserInfo = 'member/getuserinfo';
   ///社区分页接口
   static const String apiGetPageCommunityMessage ='community/PageCommunityMessage';
-  ///
+  ///发布消息
+  static const String apiPushMessage='community/publishCommunityMessage';
+  ///发布消息
+  static const String apiGetCommunityDetail='community/CommunityMessageDetail';
+
   ///
   ///
   ///

@@ -108,7 +108,7 @@ abstract class Routes {
     ),
     GetPage(name: getCommunityCardDetail,
         page:() => const CommunityMesageDetailCard() ,
-      //  binding: CommunityCardBinding()
+        binding: CommunityCardBinding()
     ),
     GetPage(
         name: pushInfoPage,
