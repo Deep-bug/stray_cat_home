@@ -60,7 +60,7 @@ dependencies:
   # 轮播图
   flutter_swiper_null_safety: ^1.0.2
   #加载webview
-  webview_flutter: ^2.0.12
+  webview_flutter: ^3.0.2
   #读取相册
   image_picker: ^0.8.5
 

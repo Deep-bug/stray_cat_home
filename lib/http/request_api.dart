@@ -5,8 +5,8 @@
 class RequestApi{
 
   ///前缀地址
-  //static const String baseurl = 'http://101.132.45.190:8888/cathome/app/v2/';
-  static const String baseurl = 'http://127.0.0.1:8888/cathome/app/v2/';
+  static const String baseurl = 'http://101.132.45.190:8888/cathome/app/v2/';
+  //static const String baseurl = 'http://127.0.0.1:8888/cathome/app/v2/';
 
 
   ///登录接口
