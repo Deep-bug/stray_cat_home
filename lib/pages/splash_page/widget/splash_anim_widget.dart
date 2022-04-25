@@ -22,7 +22,7 @@ class SplashAnimWidget extends GetCommonView<SplashController> {
     return AnimatedOpacity(
         onEnd: () {
           Get.offNamed(SpUtil.getUserInfo() == null
-              ? Routes.homePageV2
+              ? Routes.loginPage
               : Routes.homePageV2);
         },
         opacity: controller.opacityLevel,
