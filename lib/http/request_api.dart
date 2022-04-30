@@ -1,6 +1,5 @@
 
 /// @class : RequestApi
-/// @name : jhf
 /// @description :请求接口管理
 class RequestApi{
 

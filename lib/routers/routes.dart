@@ -2,8 +2,9 @@ import 'package:get/get.dart';
 import 'package:stray_cat_home/pages/cat_family_page/catInfo.dart';
 import 'package:stray_cat_home/pages/cat_family_page/cat_detail_info/cat_detail_info_binding.dart';
 import 'package:stray_cat_home/pages/cat_family_page/cat_detail_info/cat_detail_page.dart';
-import 'package:stray_cat_home/pages/community_page/community_card/community_card.dart';
-import 'package:stray_cat_home/pages/community_page/community_card/community_card_binding.dart';
+
+import 'package:stray_cat_home/pages/community_page/community_detail_card/community_card.dart';
+import 'package:stray_cat_home/pages/community_page/community_detail_card/community_card_binding.dart';
 import 'package:stray_cat_home/pages/community_page/push_page/push_binding.dart';
 import 'package:stray_cat_home/pages/community_page/push_page/push_page.dart';
 import 'package:stray_cat_home/pages/home_page_v2/home_page_v2_binding.dart';

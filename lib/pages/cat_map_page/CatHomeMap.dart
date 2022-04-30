@@ -32,9 +32,14 @@ class CatHomeMap extends GetSaveView<CatMapController> {
             children: [
               Stack(
                 children: [
-                  ToolBar(
-                    backColor: ColorStyle.color_474747,
-                    title: '猫咪地图',
+                  AppBar(
+                    backgroundColor:ColorStyle.color_24CF5F,
+                    title: Text('猫咪地图',
+                        style: TextStyle(color: Colors.white,
+                            fontSize:25)
+
+                      ),
+
                   ),
                   // Positioned(
                   //

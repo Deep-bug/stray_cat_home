@@ -77,7 +77,7 @@ class _HomePageV2State extends State<HomePageV2> with SingleTickerProviderStateM
             ),
             TabTitleIcon(
               title: StringStyles.catInfoPage,
-              icon:  Icons.ac_unit,
+              icon:  Icons.image,
             ),
             TabTitleIcon(
               title: StringStyles.homeMy.tr,

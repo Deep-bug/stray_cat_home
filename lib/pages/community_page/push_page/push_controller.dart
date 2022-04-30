@@ -5,6 +5,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:stray_cat_home/base/get/get_extension.dart';
@@ -22,6 +23,8 @@ class PushController extends BaseGetController {
   String issue = '';
   ///标题
   String title= '';
+  ///消息类型 1代表日常 2代表紧急
+  var CmuClassify=1;
 
 
 
@@ -68,16 +71,16 @@ class PushController extends BaseGetController {
 
   _upLoadImage(String uid) async {
     List<dynamic> _imgListUpload=[];
-    photoEntity.forEach((element) {
+    for (var element in photoEntity) {
       debugPrint("图片地址>>"+element.uri.toString());
       _imgListUpload.add(MultipartFile.fromFileSync(element.path,filename: element.path));
-    });
+    }
     FormData formData = FormData.fromMap({
       "uid": uid,
       "files": _imgListUpload,
       'title': title,
       'content': issue,
-      'CmuClassify': 1,
+      'CmuClassify': CmuClassify,
     });
     try {
       Dio dio = new Dio();
@@ -85,7 +88,7 @@ class PushController extends BaseGetController {
       debugPrint("开始传shu>>----$formData");
       var respone = await dio.post<String>(
          "http://101.132.45.190:8888/cathome/app/v2/community/publishCommunityMessage",
-       //   "http://127.0.0.1:8888/cathome/app/v2/community/publishCommunityMessage",
+        // "http://127.0.0.1:8888/cathome/app/v2/community/publishCommunityMessage",
           data: formData);
       if (respone.statusCode == 200) {
         ToastUtils.show('动态发布成功');

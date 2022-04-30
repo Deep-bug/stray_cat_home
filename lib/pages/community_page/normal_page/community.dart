@@ -30,37 +30,37 @@ class community extends GetSaveView<CommunityController> {
                   horizontal: NavigationToolbar.kMiddleSpacing,
                   vertical: 5.0,
                 ),
-                child: Stack(
-                  children: [
-                    ConstrainedBox(
-                      constraints: const BoxConstraints(
-                        maxHeight: 35,
-                      ),
-                      child: TextField(
-                        /// 设置字体
-                        style: const TextStyle(),
-
-                        /// 设置输入框样式
-                        decoration: InputDecoration(
-                          hintText: '请输入你想寻找的内容',
-                          /// 边框
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(35),
-                            borderSide: BorderSide.none,
-                          ),
-                           fillColor: Colors.grey[200],
-                          // 是否使用填充色
-                          filled: false,
-                          ///设置内容内边距
-                          contentPadding:
-                          const EdgeInsets.symmetric(vertical: 4.0),
-                          /// 前缀图标
-                          prefixIcon: const Icon(Icons.search),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                // child: Stack(
+                //   children: [
+                //     ConstrainedBox(
+                //       constraints: const BoxConstraints(
+                //         maxHeight: 35,
+                //       ),
+                //       child: TextField(
+                //         /// 设置字体
+                //         style: const TextStyle(),
+                //
+                //         /// 设置输入框样式
+                //         decoration: InputDecoration(
+                //           hintText: '请输入你想寻找的内容',
+                //           /// 边框
+                //           border: OutlineInputBorder(
+                //             borderRadius: BorderRadius.circular(35),
+                //             borderSide: BorderSide.none,
+                //           ),
+                //            fillColor: Colors.grey[200],
+                //           // 是否使用填充色
+                //           filled: false,
+                //           ///设置内容内边距
+                //           contentPadding:
+                //           const EdgeInsets.symmetric(vertical: 4.0),
+                //           /// 前缀图标
+                //           prefixIcon: const Icon(Icons.search),
+                //         ),
+                //       ),
+                //     ),
+                //   ],
+                // ),
               ),
               Expanded(
                 child:RefreshWidget<CommunityController>(
@@ -89,7 +89,7 @@ class community extends GetSaveView<CommunityController> {
                         image: FadeInImage.assetNetwork(
                           image: controller.CommunityItemList[index].cmuPids,
                           fit: BoxFit.cover,
-                          placeholder: 'asserts/images/myhead.png' /* 占位图 */,
+                          placeholder: 'asserts/images/loginbackground.jpg' /* 占位图 */,
                         ),
                         ///用户头像
                         avatar: ClipRRect(

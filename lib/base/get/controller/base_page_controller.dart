@@ -6,9 +6,7 @@ import 'package:stray_cat_home/widget/pull_smart_refresher.dart';
 import '../getx_controller_inject.dart';
 
 
-/// @class : BaseGetPageController
-/// @date : 2021/08/26
-/// @name : jhf
+
 /// @description :分页专用，如果页面中有分页加载，请使用此BaseGetPageController
 /// 如果没有分页，请使用BaseGetController
 /// 此页面暂时不对数据进行处理，不放置List在此处，因为当前已经很简洁了，不需要绑定[RefreshWidget]进行节省代码

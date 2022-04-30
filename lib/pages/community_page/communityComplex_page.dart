@@ -39,7 +39,7 @@ class _CommunityComplexPageState extends State<CommunityComplexPage> with Single
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: ColorStyle.color_24CF5F,
         floatingActionButton: FloatingActionButton.extended(
           onPressed: (){ Get.toNamed(Routes.pushInfoPage);},
           icon:Icon(Icons.add),
@@ -57,8 +57,8 @@ class _CommunityComplexPageState extends State<CommunityComplexPage> with Single
                     ///导航栏
                     child: TabBar(
                       isScrollable: true,
-                      labelColor: ColorStyle.color_24CF5F,
-                      unselectedLabelColor: ColorStyle.color_B8C0D4,
+                      labelColor: Colors.white,
+                      unselectedLabelColor: ColorStyle.color_F8F9FC,
                       controller: tabController,
                       labelStyle: Styles.style_FE8C28_24_bold,
                       unselectedLabelStyle: Styles.style_FFAE2E_16,

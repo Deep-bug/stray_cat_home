@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:stray_cat_home/base/get/get_common_view.dart';
 import 'package:stray_cat_home/pages/community_page/push_page/push_controller.dart';
 import 'package:stray_cat_home/pages/community_page/push_page/widget/push_photo_select_widget.dart';
@@ -11,8 +12,10 @@ import 'package:stray_cat_home/widget/_toolbar.dart';
 class PushPage extends GetCommonView<PushController> {
   const PushPage({Key? key}) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
+    ///单选框默认选择
     return Scaffold(
         resizeToAvoidBottomInset: true,
         body: SingleChildScrollView(
@@ -30,6 +33,62 @@ class PushPage extends GetCommonView<PushController> {
                 padding: EdgeInsets.zero,
                 shrinkWrap: true,
                 children: [
+                  Container(
+                    child: Row(
+                      children: [
+                        Text(
+                          '填写标题',
+                          style: Styles.style_1A2F51_14,
+                        ),
+                      ],
+                    ),
+                    margin: const EdgeInsets.only(top: 30, left: 25),
+                  ),
+
+                  Container(
+                    child: TextField(
+                      textAlign: TextAlign.left,
+                      autofocus: false,
+                      maxLines: 1,
+                      maxLength: 12,
+                      style: Styles.style_1A2F51_14,
+                      onChanged: (text) {
+                        controller
+                          ..title = text
+                          ..update();
+                      },
+                      decoration: InputDecoration(
+                        hintText: '为你的动态填写标题吧',
+                        hintStyle: Styles.style_B8C0D4_13,
+                        border: _getEditBorder(),
+                        focusedBorder: _getEditBorder(),
+                        disabledBorder: _getEditBorder(),
+                        enabledBorder: _getEditBorder(),
+                        contentPadding: const EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 11),
+                      ),
+                    ),
+                    margin: const EdgeInsets.only(top: 15, left: 25, right: 25),
+                  ),
+
+                  ///上传图片
+                  Container(
+                    child: Row(
+                      children: [
+                        Text(
+                          '上传图片',
+                          style: Styles.style_1A2F51_14,
+                        ),
+                      ],
+                    ),
+                    margin: const EdgeInsets.only(top: 20, left: 25),
+                  ),
+
+                  ///图片选择框
+                  Container(
+                    child: const PushPhotoSelectWidget(),
+                    margin: const EdgeInsets.only(top: 15, right: 18, left: 18),
+                  ),
                   Container(
                     child: Text(
                       '发布文字',
@@ -66,63 +125,50 @@ class PushPage extends GetCommonView<PushController> {
                     margin: const EdgeInsets.only(top: 15, left: 25, right: 25),
                   ),
 
-                  ///上传图片
+
+
+                  // Box.vBox50,
+                  ///发表类型
                   Container(
                     child: Row(
                       children: [
                         Text(
-                          '上传图片',
-                          style: Styles.style_1A2F51_14,
-                        ),
-                      ],
-                    ),
-                    margin: const EdgeInsets.only(top: 20, left: 25),
-                  ),
-
-                  ///图片选择框
-                  Container(
-                    child: const PushPhotoSelectWidget(),
-                    margin: const EdgeInsets.only(top: 15, right: 18, left: 18),
-                  ),
-
-                  ///联系方式
-                  Container(
-                    child: Row(
-                      children: [
-                        Text(
-                          '填写标题',
+                          '发表类型',
                           style: Styles.style_1A2F51_14,
                         ),
                       ],
                     ),
                     margin: const EdgeInsets.only(top: 30, left: 25),
                   ),
-
                   Container(
-                    child: TextField(
-                      textAlign: TextAlign.left,
-                      autofocus: false,
-                      maxLines: 1,
-                      style: Styles.style_1A2F51_14,
-                      onChanged: (text) {
-                        controller
-                          ..title = text
-                          ..update();
-                      },
-                      decoration: InputDecoration(
-                        hintText: '为你的动态填写标题吧',
-                        hintStyle: Styles.style_B8C0D4_13,
-                        border: _getEditBorder(),
-                        focusedBorder: _getEditBorder(),
-                        disabledBorder: _getEditBorder(),
-                        enabledBorder: _getEditBorder(),
-                        contentPadding: const EdgeInsets.symmetric(
-                            vertical: 10, horizontal: 11),
-                      ),
+                    child: Row(
+                        children:[
+                          Radio(
+                            value: 1,
+                            groupValue: controller.CmuClassify,
+                            activeColor: Colors.green,
+                            onChanged: (value) {
+                              controller
+                                ..CmuClassify = 1
+                                ..update();
+                            },
+                          ),
+                          Text("日常"),
+                          Radio(
+                            value: 2,
+                            groupValue: controller.CmuClassify,
+                            activeColor: Colors.red,
+                            onChanged: (value) {
+                              controller
+                                ..CmuClassify = 2
+                                ..update();
+                            },
+                          ),
+                          Text("求助"),
+                        ]
                     ),
-                    margin: const EdgeInsets.only(top: 15, left: 25, right: 25),
+                    margin: const EdgeInsets.only(top: 10, left: 10, right: 25),
                   ),
-
                   Box.vBox50,
 
                   GestureDetector(

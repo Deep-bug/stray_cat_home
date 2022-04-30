@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 /// @description :字符管理
 class StringStyles{
 
-  static const String appName = '校园流浪猫管理平台';
+  static const String appName = 'Stray cat home';
   static const String loading = '加载中';
 
   static const String loginAccountNameHint = '请输入用户名';
@@ -134,7 +134,7 @@ class Messages extends Translations{
   @override
   Map<String, Map<String, String>> get keys =>{
     'zh_CN' :{
-      StringStyles.appName : '校园流浪猫管理平台',
+      StringStyles.appName : '校园流浪猫手机端',
       StringStyles.loading : '加载中...',
       StringStyles.loginAccountNameHint : '请输入用户名',
       StringStyles.loginAccountPwdHint : '请输入密码',
