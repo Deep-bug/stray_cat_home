@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
-import 'package:stray_cat_home/homeIndexPage.dart';
+// import 'package:stray_cat_home/homeIndexPage.dart';
 import 'package:stray_cat_home/pages/splash_page/splash_binding.dart';
 import 'package:stray_cat_home/pages/splash_page/splash_page.dart';
 import 'package:stray_cat_home/res/strings.dart';

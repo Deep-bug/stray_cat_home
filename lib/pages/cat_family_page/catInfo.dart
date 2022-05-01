@@ -4,6 +4,7 @@ import 'package:stray_cat_home/pages/cat_family_page/widget/cat_item.dart';
 import 'package:stray_cat_home/pages/cat_family_page/widget/cat_view.dart';
 import 'package:stray_cat_home/pages/cat_family_page/widget/page_title_list.dart';
 import 'package:stray_cat_home/pages/user_page/widget/AppBarTabsItem.dart';
+import 'package:stray_cat_home/res/colors.dart';
 
 class catInfo extends StatefulWidget {
   const catInfo({Key? key}) : super(key: key);
@@ -20,14 +21,15 @@ class _catInfoState extends State<catInfo> {
     return Scaffold(
         appBar: AppBar(
           title: const Text("猛兽图鉴"),
+          backgroundColor: ColorStyle.color_24CF5F,
         ),
         body: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              const PageListTitle(),
-              const SizedBox(
-                height: 12,
-              ),
+             // const PageListTitle(),
+             //  const SizedBox(
+             //    height: 12,
+             //  ),
               CatGridView(size: size),
             ])
         // Column(

@@ -1,10 +1,15 @@
 import 'dart:math';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:stray_cat_home/pages/community_page/widget/favorite_button.dart';
+import 'package:stray_cat_home/routers/routes.dart';
 
 import 'package:flutter/material.dart';
 
 class CardWidget extends StatefulWidget {
   final Widget image;
   final Widget avatar;
+  final String id;
   final Widget desc;
   final String name;
   const CardWidget({
@@ -13,6 +18,7 @@ class CardWidget extends StatefulWidget {
     required this.avatar,
     required this.desc,
     required this.name,
+    required this.id,
   }) : super(key: key);
   @override
   _CardWidgetState createState() => _CardWidgetState();
@@ -29,6 +35,7 @@ class _CardWidgetState extends State<CardWidget> {
 
   @override
   Widget build(BuildContext context) {
+
     ThemeData _theme = Theme.of(context);
     Color _disabledColor = _theme.disabledColor;
     TextStyle textStyle = TextStyle(
@@ -42,20 +49,7 @@ class _CardWidgetState extends State<CardWidget> {
         color: Colors.white,
       ),
       child: GestureDetector(
-        onTap: () {
-          print("点击进去");
-        },
-        /* onTapUp: (details) {
-          print('Tap!');
-        },
-        // 模拟双击效果
-        onTapDown: (details) {
-          var now = DateTime.now().millisecondsSinceEpoch;
-          if (now - lastTapDown < 200) {
-            print("Double Tap!");
-          }
-          lastTapDown = now;
-        }, */
+        onTap: ()=>Get.toNamed(Routes.getCommunityCardDetail,arguments: widget.id),
         child: Column(
           children: [
             ClipRRect(
@@ -128,59 +122,3 @@ class _CardWidgetState extends State<CardWidget> {
   }
 }
 
-// 把按钮组件拿出来,不然每次点击收藏更新widget的时候会把card widget也一起刷新了
-// 这样会造成不必要的多次渲染和请求
-// 只需要重新渲染当前的按钮widget就够了
-class FavoriteBtn extends StatefulWidget {
-  @override
-  _FavoriteBtnState createState() => _FavoriteBtnState();
-}
-
-class _FavoriteBtnState extends State<FavoriteBtn>
-    with AutomaticKeepAliveClientMixin {
-  //不会被销毁,占内存中
-  bool get wantKeepAlive => true;
-  bool liked = false;
-  int howLiked = Random().nextInt(5000);
-  @override
-  Widget build(BuildContext context) {
-    super.build(context);
-    ThemeData _theme = Theme.of(context);
-
-    Color _disabledColor = _theme.disabledColor;
-    TextStyle textStyle = TextStyle(
-      decoration: TextDecoration.none,
-      color: _disabledColor,
-      fontSize :_theme.textTheme.bodyText1!.fontSize!-2,
-    );
-    return GestureDetector(
-      onTap: () {
-        setState(() {
-          this.liked = !this.liked;
-          if (this.liked) {
-            this.howLiked++;
-          } else {
-            --this.howLiked;
-          }
-        });
-      },
-      child: Container(
-        alignment: Alignment.centerRight,
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(
-              liked ? Icons.favorite : Icons.favorite_border,
-              color: liked ? _theme.primaryColor : _disabledColor,
-              size: IconTheme.of(context).size !- 6,
-            ),
-            const SizedBox(
-              width: 3,
-            ),
-            Text("${howLiked}", style: textStyle)
-          ],
-        ),
-      ),
-    );
-  }
-}

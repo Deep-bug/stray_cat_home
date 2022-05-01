@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 /// @description :字符管理
 class StringStyles{
 
-  static const String appName = '校园流浪猫管理平台';
+  static const String appName = 'Stray cat home';
   static const String loading = '加载中';
 
   static const String loginAccountNameHint = '请输入用户名';
@@ -101,9 +101,9 @@ class StringStyles{
   static const String saveSuccess = "saveSuccess";
   static const String saveFail = "saveFail";
 
-  static const String tabHome= "tabHome";
-  static const String tabSquare= "tabSquare";
-  static const String tabAsk = "tabAsk";
+  static const String tabNormal= "tabNormal";
+  static const String tabSos= "tabSos";
+  static const String tabAdopt = "tabAdopt";
   static const String tabWechatPublic = "tabWechatPublic";
   static const String tabWechatSwitch = "tabWechatSwitch";
   static const String tabWechatDelete = "tabWechatDelete";
@@ -134,7 +134,7 @@ class Messages extends Translations{
   @override
   Map<String, Map<String, String>> get keys =>{
     'zh_CN' :{
-      StringStyles.appName : '校园流浪猫管理平台',
+      StringStyles.appName : '校园流浪猫手机端',
       StringStyles.loading : '加载中...',
       StringStyles.loginAccountNameHint : '请输入用户名',
       StringStyles.loginAccountPwdHint : '请输入密码',
@@ -215,9 +215,9 @@ class Messages extends Translations{
       StringStyles.shareBrowser : "浏览器打开",
       StringStyles.saveSuccess :  "保存成功",
       StringStyles.saveFail : "保存失败",
-      StringStyles.tabHome :  "首页",
-      StringStyles.tabSquare :  "广场",
-      StringStyles.tabAsk :  "问答",
+      StringStyles.tabNormal :  "日常",
+      StringStyles.tabSos :  "求助",
+      StringStyles.tabAdopt :  "领养",
       StringStyles.searchHint :  "搜索您想要的内容",
       StringStyles.search :  "搜索",
       StringStyles.searchHistory :  "搜索历史",
@@ -318,9 +318,9 @@ class Messages extends Translations{
       StringStyles.shareBrowser : "瀏覽器打開",
       StringStyles.saveSuccess :  "保存成功",
       StringStyles.saveFail : "保存失敗",
-      StringStyles.tabHome :  "首頁",
-      StringStyles.tabSquare :  "廣場",
-      StringStyles.tabAsk :  "問答",
+      StringStyles.tabNormal :  "首頁",
+      StringStyles.tabSos :  "廣場",
+      StringStyles.tabAdopt :  "問答",
       StringStyles.searchHint :  "搜索您想要的內容",
       StringStyles.search :  "搜索",
       StringStyles.searchHistory :  "搜索歷史",
@@ -420,9 +420,9 @@ class Messages extends Translations{
       StringStyles.shareBrowser : "瀏覽器打開",
       StringStyles.saveSuccess :  "保存成功",
       StringStyles.saveFail : "保存失敗",
-      StringStyles.tabHome :  "首頁",
-      StringStyles.tabSquare :  "廣場",
-      StringStyles.tabAsk :  "問答",
+      StringStyles.tabNormal:"首頁",
+      StringStyles.tabSos :   "廣場",
+      StringStyles.tabAdopt :"問答",
       StringStyles.searchHint :  "搜索您想要的內容",
       StringStyles.search :  "搜索",
       StringStyles.searchHistory :  "搜索歷史",
@@ -522,9 +522,9 @@ class Messages extends Translations{
       StringStyles.shareBrowser : "Browser opens",
       StringStyles.saveSuccess :  "Saved successfully",
       StringStyles.saveFail : "Saved fail",
-      StringStyles.tabHome :  "FrontPage",
-      StringStyles.tabSquare :  "Square",
-      StringStyles.tabAsk :  "Q&A",
+      StringStyles.tabNormal:  "FrontPage",
+      StringStyles.tabSos : "Square",
+      StringStyles.tabAdopt : "Q&A",
       StringStyles.searchHint :  "Search what you want",
       StringStyles.search :  "Search",
       StringStyles.searchHistory :  "Search history",

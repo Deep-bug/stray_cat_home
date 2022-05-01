@@ -5,9 +5,7 @@ import 'package:stray_cat_home/res/strings.dart';
 import 'package:stray_cat_home/ui/dialog/dialog_common_style.dart';
 import 'package:stray_cat_home/ui/dialog/dialog_loading.dart';
 
-/// @class : GetExtension
-/// @date : 2021/08/18
-/// @name : jhf
+
 /// @description :get 扩展方法
 extension GetExtension on GetInterface {
   ///隐藏dialog

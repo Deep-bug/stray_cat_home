@@ -9,8 +9,8 @@ import 'dart:collection';
 class R {
 
   ///----------------------------PNG、JPG---------------------------
-  static const String assetsImagesApplication= 'asserts/images/loadingPicture.jpeg';
-  static const String assetsImagesLoginBackground= 'asserts/images/loginbackground.jpeg';
+  static const String assetsImagesApplication= 'asserts/images/loginbackground.jpg';
+  static const String assetsImagesLoginBackground= 'asserts/images/loginbackgroundold.jpeg';
   static const String assetsImagesRegister='asserts/images/register.jpeg';
   static const String assetsIntegralRanking = 'asserts/images/3.0x/ranking_integral.png';
   static const String assetsRankingTopBg = 'asserts/images/3.0x/ranking_top_bg.png';
@@ -34,6 +34,7 @@ class R {
   static const String assetsImagesCollectQuit = 'assets/svg/collect_quit.svg';
   static const String assetsImagesProgram = 'asserts/svg/program.svg';
   static const String assetsImagesDateTime= 'asserts/svg/date_time.svg';
+  static const String assetsImagesPageBack='asserts/svg/back.svg';
 
   ///----------------------------lottie---------------------------
   static const String assetsLottieLoading = 'asserts/lottie/lottie_common_load.json';

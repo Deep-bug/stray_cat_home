@@ -5,7 +5,8 @@ import 'package:get/get_instance/src/extension_instance.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:stray_cat_home/pages/cat_family_page/catInfo.dart';
 import 'package:stray_cat_home/pages/cat_map_page/CatHomeMap.dart';
-import 'package:stray_cat_home/pages/community_page/community.dart';
+import 'package:stray_cat_home/pages/community_page/normal_page/community.dart';
+import 'package:stray_cat_home/pages/community_page/communityComplex_page.dart';
 import 'package:stray_cat_home/pages/home_page_v2/widget/home_tab_title.dart';
 import 'package:stray_cat_home/pages/my_page/my_controller.dart';
 import 'package:stray_cat_home/pages/my_page/my_page.dart';
@@ -55,7 +56,7 @@ class _HomePageV2State extends State<HomePageV2> with SingleTickerProviderStateM
       backgroundColor: ColorStyle.color_F8F9FC,
       body: TabBarView(
         controller: tabController,
-        children: const [CatHomeMap(), community(), catInfo(),MyPage()],
+        children:  [CatHomeMap(), CommunityComplexPage(), catInfo(),MyPage()],
       ),
       bottomNavigationBar: Container(
         height: 65,
@@ -76,7 +77,7 @@ class _HomePageV2State extends State<HomePageV2> with SingleTickerProviderStateM
             ),
             TabTitleIcon(
               title: StringStyles.catInfoPage,
-              icon:  Icons.ac_unit,
+              icon:  Icons.image,
             ),
             TabTitleIcon(
               title: StringStyles.homeMy.tr,

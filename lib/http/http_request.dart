@@ -47,7 +47,7 @@ class HttpRequest {
             ? Headers.jsonContentType
             : Headers.formUrlEncodedContentType,
         // 适用于post form表单提交
-        // responseType: ResponseType.json,
+        //responseType: ResponseType.json,
         validateStatus: (status) {
           /// 不使用http状态码判断状态，使用AdapterInterceptor来处理（适用于标准REST风格）
           return true;

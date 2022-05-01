@@ -2,8 +2,6 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 
-/// @class : HttpException
-/// @name : jhf
 /// @description :错误信息处理
 class HttpException {
   static const int success = 200;

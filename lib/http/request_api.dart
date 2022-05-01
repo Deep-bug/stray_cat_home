@@ -1,6 +1,5 @@
 
 /// @class : RequestApi
-/// @name : jhf
 /// @description :请求接口管理
 class RequestApi{
 
@@ -21,6 +20,16 @@ class RequestApi{
   static const String apiGetCatDetailInfo='catInform/CatDetailInfoById';
   ///用户信息接口
   static const String apiUserInfo = 'member/getuserinfo';
+  ///社区分页接口
+  static const String apiGetPageCommunityMessage ='community/PageCommunityMessage';
+  ///发布消息
+  static const String apiPushMessage='community/publishCommunityMessage';
+  ///发布消息
+  static const String apiGetCommunityDetail='community/CommunityMessageDetail';
+
+  ///
+  ///
+  ///
   ///首页Tab栏接口
   static const String apiTab = 'project/tree/json';
   ///项目接口
